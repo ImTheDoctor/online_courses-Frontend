@@ -1,0 +1,117 @@
+@import './variables.scss';
+
+.footer {
+    width: 100%;
+    background-color: $dark-color;
+    color: $dark-white;
+
+    .top {
+        display: flex;
+        padding: 20px 0;
+        gap: 20px;
+
+        .top_box {
+            width: 25%;
+            margin: 40px 0 20px 0;
+            gap: 10px;
+
+            img {
+                padding: 0 0 20px 0;
+            }
+        }
+
+        .top_box:nth-child(n+2) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h3 {
+                font-size: 1.2em;
+                color: $white;
+                padding-bottom: 20px;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 100%;
+                transition: all 0.5s;
+
+                li {
+                    &:hover {
+                        color: $orange;
+                    }
+                }
+            }
+        }
+
+        .top_box:nth-child(3) {
+            a {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                padding-bottom: 10px;
+                transition: all 0.4s;
+
+                &:hover {
+                    color: $orange;
+                }
+            }
+        }
+
+        .top_box:nth-child(4) {
+
+            //background-color: aqua;
+            input {
+                min-width: 100%;
+                background-color: #393C46;
+                border-radius: 4px;
+                padding: 9px 12px;
+                outline: none;
+                border: none;
+                color: $white;
+            }
+
+            span {
+                font-size: 0.750em;
+            }
+
+            .socials {
+                min-width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-evenly;
+                padding-top: 15px;
+
+                // background-color: aqua;
+                a {
+                    font-size: 24px;
+                    transition: all 0.4s;
+
+                    &:hover {
+                        color: $orange;
+                    }
+                }
+            }
+        }
+    }
+
+    .bottom {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: $second-dark-color;
+        align-items: center;
+        padding: 10px 0;
+        color: $dark-white;
+        font-size: 0.875em;
+
+        .heart {
+            color: $orange;
+            align-items: center;
+        }
+    }
+}
