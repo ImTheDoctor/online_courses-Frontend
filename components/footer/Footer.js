@@ -23,20 +23,21 @@ const Footer = () => {
                 </div>
                 <div className={top_box}>
                     <h3>CONTACT US</h3>
-                    <Link href='tel:+4055550128'><BsPhone className={tel} />(405) 555-0128</Link>
-                    <Link href='mailto:hello@createx.com'><AiOutlineMail className={mail} />hello@createx.com</Link>
+                    <address>
+                        <Link href='tel:+4055550128'><BsPhone className={tel} />(405) 555-0128</Link>
+                        <Link href='mailto:hello@createx.com'><AiOutlineMail className={mail} />hello@createx.com</Link>
+                    </address>
                 </div>
                 <div className={top_box}>
-                    <h3>SIGN UP TO OUR NEWSLETTER</h3>
-                    <input type="text" placeholder="Email address" name="mail" required ></input>
-                    <span>*Subscribe to our newsletter to receive communications and early updates from Createx SEO Agency.</span>
+                    <h3>FOLLOW US</h3>
+                    <span>*Follow us on social networks to stay up to date with Createx SEO Agency updates.</span>
                     <div className={socials}>
-                        <Link href='https://www.facebook.com/'><FiFacebook /></Link>
-                        <Link href='https://www.twitter.com/'><FiTwitter /></Link>
-                        <Link href='https://www.youtube.com/'><AiOutlineYoutube /></Link>
-                        <Link href='https://web.telegram.org/z/'><FaTelegramPlane /></Link>
-                        <Link href='https://www.instagram.com/'><FiInstagram /></Link>
-                        <Link href='https://www.linkedin.com/feed/'><FaLinkedinIn /></Link>
+                        <Link href='https://www.facebook.com/' target='_blank'><FiFacebook /></Link>
+                        <Link href='https://www.twitter.com/' target='_blank'><FiTwitter /></Link>
+                        <Link href='https://www.youtube.com/' target='_blank'><AiOutlineYoutube /></Link>
+                        <Link href='https://web.telegram.org/z/' target='_blank'><FaTelegramPlane /></Link>
+                        <Link href='https://www.instagram.com/' target='_blank'><FiInstagram /></Link>
+                        <Link href='https://www.linkedin.com/feed/' target='_blank'><FaLinkedinIn /></Link>
                     </div>
                 </div>
             </div>

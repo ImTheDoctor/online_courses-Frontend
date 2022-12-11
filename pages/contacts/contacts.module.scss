@@ -1,0 +1,147 @@
+@import './variables.scss';
+
+.top_section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 11.25em;
+
+    .info_box {
+        width: 50%;
+
+        h1 {
+            font-size: 2.875em;
+            font-weight: 900;
+            line-height: 3.75em;
+        }
+
+        address {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25em;
+
+            a {
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 10x;
+
+                p {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    span {
+                        font-size: 0.875em;
+
+                    }
+
+                    svg {
+                        color: $orange;
+                        font-size: 1.2em;
+                    }
+                }
+
+                span {
+                    font-size: 1.125em;
+                    transition: $transition;
+
+                    &:hover {
+                        color: $orange;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .map_box {
+        width: 50%;
+
+        .map {
+            border: 0;
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.bottom_section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 11.25em;
+
+    .image_section {
+        width: 50%;
+    }
+
+    .form_box {
+        width: 50%;
+
+        h1 {
+            font-size: 2.875em;
+            font-weight: 900;
+        }
+
+        form {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 20px;
+
+            div {
+                display: flex;
+                flex-direction: column;
+                width: 48.1%;
+                height: auto;
+                gap: 5px;
+
+                input[type=text],
+                input[type=email],
+                input[type=tel] {
+                    border: 1px solid $grey;
+                    padding: 13px 16px;
+                    margin-right: 25px;
+                    width: 100%;
+                    border-radius: 4px;
+                }
+            }
+
+            div:nth-child(5) {
+                width: 100%;
+
+                textarea {
+                    width: 100%;
+                    min-height: 120px;
+                    resize: none;
+                    border: 1px solid $grey;
+                    border-radius: 4px;
+                    padding: 13px 16px;
+                }
+            }
+
+            div:nth-child(6) {
+                width: 100%;
+
+                input[type=submit] {
+                    width: 100%;
+                    background-color: $orange;
+                    border: none;
+                    outline: none;
+                    padding: 13px 16px;
+                    border-radius: 4px;
+                    color: $white;
+                    cursor: pointer;
+                    transition: $transition;
+
+                    &:hover {
+                        background-color: $dark-color;
+                        color: $dark-white;
+                    }
+                }
+            }
+        }
+    }
+
+}

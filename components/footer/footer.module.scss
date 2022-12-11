@@ -36,7 +36,7 @@
                 flex-direction: column;
                 justify-content: space-between;
                 height: 100%;
-                transition: all 0.5s;
+                transition: $transition;
 
                 li {
                     &:hover {
@@ -52,7 +52,7 @@
                 align-items: center;
                 gap: 10px;
                 padding-bottom: 10px;
-                transition: all 0.4s;
+                transition: $transition;
 
                 &:hover {
                     color: $orange;
@@ -61,17 +61,6 @@
         }
 
         .top_box:nth-child(4) {
-
-            //background-color: aqua;
-            input {
-                min-width: 100%;
-                background-color: #393C46;
-                border-radius: 4px;
-                padding: 9px 12px;
-                outline: none;
-                border: none;
-                color: $white;
-            }
 
             span {
                 font-size: 0.750em;
@@ -87,8 +76,8 @@
 
                 // background-color: aqua;
                 a {
-                    font-size: 24px;
-                    transition: all 0.4s;
+                    font-size: 1.5em;
+                    transition: $transition;
 
                     &:hover {
                         color: $orange;
