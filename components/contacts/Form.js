@@ -11,7 +11,8 @@ const Form = () => {
         e.preventDefault()
         await postMessage(data)
             .then(res => setFormSuccess(res))
-            .then(formSuccess === 'success' ?
+            .then(formSuccess === 'success'
+                ?
                 toast.success("Letter Sent!. Thank you", {
                     position: toast.POSITION.BOTTOM_RIGHT,
                     autoClose: 2000
@@ -21,8 +22,6 @@ const Form = () => {
                     position: toast.POSITION.BOTTOM_RIGHT,
                     autoClose: 2000
                 }))
-
-
         e.target.reset()
     }
 
