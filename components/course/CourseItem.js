@@ -18,8 +18,9 @@ const CourseItem = () => {
     <>
       {courses && courses.length > 0
         ?
-        courses.map((item) => {
-          return <div className={course_box} key={item._id}>
+        courses && courses.map((item) => {
+          return (
+          <div className={course_box} key={item._id}>
             <Link href={`/courses/${item._id}`}>
               <div className={image_wrapper}>
                 <Image className={img} src={`http://localhost:5000/uploads/${item.teacherID.teacherImgUrl.filename}`} width={480} height={480} alt='img' priority />
@@ -31,7 +32,7 @@ const CourseItem = () => {
               </div>
             </Link>
           </div>
-        })
+        )})
         :
         <div>Data not found</div>
       }

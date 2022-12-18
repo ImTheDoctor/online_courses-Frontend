@@ -6,6 +6,7 @@
     flex-direction: column;
     width: 32%;
     max-height: 300px;
+
     .image_wrapper {
         width: 100%;
         max-height: 50%;
@@ -14,6 +15,8 @@
 
         .img {
             transition: 0.4s;
+            width: auto;
+            height: auto;
 
             &:hover {
                 transform: scale(1.2) rotate(-4deg);
@@ -38,5 +41,162 @@
             color: $white;
         }
 
+    }
+}
+
+.title_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    // background-color: bisque;
+    .title {
+        // background-color: aqua;
+        text-align: center;
+        font-weight: 900;
+        font-size: 2.875em;
+        max-width: 500px;
+        padding: 40px 0;
+    }
+}
+
+.main_section {
+    .course_section {
+        // background-color: aqua;
+        display: flex;
+        margin-bottom: 180px;
+
+        .left_section {
+            // background-color: aquamarine;
+            flex-basis: 70%;
+
+            .description {
+                margin-bottom: 46px;
+
+                h2 {
+                    font-weight: 900;
+                    font-size: 2.875em;
+                    max-width: 500px;
+                    margin-bottom: 40px;
+                }
+
+                p {
+                    font-weight: 400;
+                    font-size: 1em;
+                    max-width: 600px;
+                    line-height: 25.6px;
+                }
+            }
+
+            .learn_info {
+                h3 {
+                    font-weight: 700;
+                    font-size: 1.75em;
+                    max-width: 500px;
+                    margin-bottom: 24px;
+                }
+
+                p {
+                    display: flex;
+                    align-items: center;
+                    gap: 16px;
+                    font-weight: 400;
+                    font-size: 1em;
+                    max-width: 500px;
+                    margin-bottom: 4px;
+
+                    svg {
+                        color: $orange;
+                    }
+                }
+            }
+        }
+
+        .right_section {
+            // background-color: bisque;
+            display: flex;
+            flex-basis: 30%;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 1px solid #E5E8ED;
+            padding: 32px;
+
+            .course_info {
+                margin-bottom: 30px;
+                p {
+                    font-size: 0.875em;
+                    font-weight: 700;
+                }
+
+                span {
+                    font-size: 1.5em;
+                    font-weight: 500;
+                    color: $orange;
+                }
+            }
+
+            .price {
+                p {
+                    font-size: 0.875em;
+                    font-weight: 700;
+                }
+
+                span {
+                    font-size: 1.5em;
+                    font-weight: 500;
+                    color: $orange;
+                }
+            }
+
+            button {
+                width: 100%;
+                background-color: $orange;
+                border: none;
+                outline: none;
+                padding: 13px 16px;
+                border-radius: 4px;
+                color: $white;
+                cursor: pointer;
+                transition: $transition;
+
+                &:hover {
+                    background-color: $dark-color;
+                    color: $dark-white;
+                }
+            }
+        }
+    }
+
+    .teacher_section{
+        //background-color: aqua;
+        display: flex;
+        margin-bottom: 180px;
+        .imgWrapper{
+            flex-basis: 50%;
+        }
+        .teacher_info{
+            flex-basis: 50%;
+            h6{
+                font-weight: 700;
+                font-size: 1em;
+            }
+            h1{
+                font-weight: 900;
+                font-size: 2.875em;
+                margin: 8px 0 16px 0;
+            }
+            span{
+                font-weight: 400;
+                font-size: 1.25em;
+                color: #787A80;
+                
+            }
+            p{
+                margin-top: 20px;
+                font-weight: 400;
+                font-size: 1em;
+            }
+        }
     }
 }

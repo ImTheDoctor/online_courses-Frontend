@@ -9,26 +9,11 @@ export const getApiCourse = async () => {
     }
 }
 
-// export const createCourse = async (data) => {
-//     try {
-//         await axios.post(`http://localhost:5000/courses/`, data, { headers: { authorization: localStorage.getItem('tkn') } })
-//     } catch (error) {
-//         console.log('Err', error.message);
-//     }
-// }
-
-// export const deleteCourse = async (id) => {
-//     try {
-//         return await axios.delete(`http://localhost:5000/courses/${id}`, { headers: { authorization: localStorage.getItem('tkn') } })
-//     } catch (error) {
-//         console.log('Err', error.message);
-//     }
-// }
-
-// export const updateCourse = async (id, data) => {
-//     try {
-//         return await axios.patch(`http://localhost:5000/courses/${id}`, data, { headers: { authorization: localStorage.getItem('tkn') } })
-//     } catch (error) {
-//         console.log('Err', error.message);
-//     }
-// }
+export const postMessage = async (dataFromApp) => {
+    try {
+        const { data } = await axios.post(`http://localhost:5000/contact/`, dataFromApp)
+        return data
+    } catch (error) {
+        console.log('Err', error.message);
+    }
+}
