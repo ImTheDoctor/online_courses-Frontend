@@ -1,6 +1,6 @@
 # Createx - Online Courses (Client Part)
 
-Welcome to Createx. This is a fully functional website where you can buy online courses. The backend is written in Node JS/Express, the admin panel is in React and the UI framework is ANT Design, and the client side is written in NEXT JS.
+Welcome to Createx. This is a fully functional website where you can buy online courses. The backend is written using Node JS/Express, the admin panel built with React and the UI framework is ANT Design. The client side is written in NEXT JS.
 
 ## ADMIN PANEL AND  
 
@@ -22,7 +22,7 @@ First you need to clone the repository
 
 ```
 $ git clone https://github.com/ImTheDoctor/online_courses-Frontend.git
-$ cd .. project
+$ cd online_courses-Frontend
 ```
 
 After cloning do install dependencies
@@ -33,8 +33,8 @@ $ npm install
 
 ## Features
 
-- All data fetching from backend via Axios
-- For Authentication i use custom hooks (useLogin, useRegister and useLogout) and react-context
+- Data fetching from backend via Axios
+- For Authentication I use custom hooks (useLogin, useRegister and useLogout) and react-context
 Example for login and register
 ```
 import { useLogin } from '/hooks/useLogin';
@@ -64,11 +64,7 @@ const register = async (e) => {
 ```
 
 - All data is stored in react saga (See in `redux` folder)
-- All UI components is written in css modules and scss(Sass)
-
-
-
-
+- All UI components are written in css modules and scss(Sass)
 
 ## Contacts
 
