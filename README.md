@@ -1,34 +1,75 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Createx - Online Courses (Client Part)
 
-## Getting Started
+Welcome to Createx. This is a fully functional website where you can buy online courses. The backend is written in Node JS/Express, the admin panel is in React and the UI framework is ANT Design, and the client side is written in NEXT JS.
 
-First, run the development server:
+## ADMIN PANEL AND  
 
-```bash
-npm run dev
-# or
-yarn dev
+- [Admin Panel](https://github.com/ImTheDoctor/online_courses_admin)
+- [Backend](https://github.com/ImTheDoctor/online_courses-Backend)
+
+## Technologies
+
+- [NextJS](https://vercel.com/solutions/nextjs)
+- [React Saga](https://redux-saga.js.org/)
+- [React Icons](https://react-icons.github.io/react-icons/)
+- [React Toastify](https://www.npmjs.com/package/react-toastify)
+- [Axios](https://axios-http.com/docs/intro)
+
+
+## USAGE
+
+First you need to clone the repository 
+
+```
+$ git clone https://github.com/ImTheDoctor/online_courses-Frontend.git
+$ cd .. project
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+After cloning do install dependencies
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```
+$ npm install
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Features
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- All data fetching from backend via Axios
+- For Authentication i use custom hooks (useLogin, useRegister and useLogout) and react-context
+Example for login and register
+```
+import { useLogin } from '/hooks/useLogin';
+import { useRegister } from '/hooks/useRegister';
+...
 
-## Learn More
+const { login, error, isLoading } = useLogin()
+const { register, error, isLoading } = useRegister()
+...
+const login = async (e) => {
+        e.preventDefault()
+        const newInfo = {
+            email,
+            password,
+        }
+        await login(newInfo)
+    }
 
-To learn more about Next.js, take a look at the following resources:
+const register = async (e) => {
+        e.preventDefault()
+        const newInfo = {
+            email,
+            password,
+        }
+        await register(newInfo)
+    }
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- All data is stored in react saga (See in `redux` folder)
+- All UI components is written in css modules and scss(Sass)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Contacts
+
+- [Henrik Hayrapetyan](https://www.linkedin.com/in/henrik-hayrapetyan/) — FullStack JS developer / Front-End developer
