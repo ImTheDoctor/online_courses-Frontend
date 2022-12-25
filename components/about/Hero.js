@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import {hero, about_section, img_wrapper} from './about.module.scss'
+import { hero, about_section, img_wrapper } from './about.module.scss'
 
 const Hero = () => {
     return (

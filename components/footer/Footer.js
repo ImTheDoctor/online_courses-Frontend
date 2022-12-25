@@ -32,12 +32,12 @@ const Footer = () => {
                     <h3>FOLLOW US</h3>
                     <span>*Follow us on social networks to stay up to date with Createx SEO Agency updates.</span>
                     <div className={socials}>
-                        <Link href='https://www.facebook.com/' target='_blank'><FiFacebook /></Link>
-                        <Link href='https://www.twitter.com/' target='_blank'><FiTwitter /></Link>
-                        <Link href='https://www.youtube.com/' target='_blank'><AiOutlineYoutube /></Link>
-                        <Link href='https://web.telegram.org/z/' target='_blank'><FaTelegramPlane /></Link>
-                        <Link href='https://www.instagram.com/' target='_blank'><FiInstagram /></Link>
-                        <Link href='https://www.linkedin.com/feed/' target='_blank'><FaLinkedinIn /></Link>
+                        <Link href='https://www.facebook.com/' aria-label="facebook" target='_blank'><FiFacebook /></Link>
+                        <Link href='https://www.twitter.com/' aria-label="twitter" target='_blank'><FiTwitter /></Link>
+                        <Link href='https://www.youtube.com/' aria-label="youtube" target='_blank'><AiOutlineYoutube /></Link>
+                        <Link href='https://web.telegram.org/z/' aria-label="telegram" target='_blank'><FaTelegramPlane /></Link>
+                        <Link href='https://www.instagram.com/' aria-label="instagram" target='_blank'><FiInstagram /></Link>
+                        <Link href='https://www.linkedin.com/feed/' aria-label="linkedin" target='_blank'><FaLinkedinIn /></Link>
                     </div>
                 </div>
             </div>

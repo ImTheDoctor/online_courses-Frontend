@@ -56,6 +56,12 @@
 
     .img_wrapper {
         flex-basis: 40%;
+
+        img {
+            background-color: aqua;
+            width: 100%;
+            display: block;
+        }
     }
 }
 

@@ -5,23 +5,21 @@ import "react-toastify/dist/ReactToastify.css";
 
 const Form = () => {
     const [data, setData] = useState([])
-    const [formSuccess, setFormSuccess] = useState('')
 
     const onSubmit = async (e) => {
         e.preventDefault()
-        await postMessage(data)
-            .then(res => setFormSuccess(res))
-            .then(formSuccess === 'success'
-                ?
-                toast.success("Letter Sent!. Thank you", {
-                    position: toast.POSITION.BOTTOM_RIGHT,
-                    autoClose: 2000
-                })
-                :
-                toast.error("Error Notification!", {
-                    position: toast.POSITION.BOTTOM_RIGHT,
-                    autoClose: 2000
-                }))
+        const res = await postMessage(data)
+        res && res === 'success'
+            ?
+            toast.success("Letter Sent!. Thank you", {
+                position: toast.POSITION.BOTTOM_RIGHT,
+                autoClose: 2000
+            })
+            :
+            toast.error("Error Notification!", {
+                position: toast.POSITION.BOTTOM_RIGHT,
+                autoClose: 2000
+            })
         e.target.reset()
     }
 

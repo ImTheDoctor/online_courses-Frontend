@@ -1,4 +1,6 @@
-.navbar{
+@import './variables.scss';
+
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -7,11 +9,72 @@
     width: 100%;
     padding: 20px 10px;
 
-    .menu{
+    .menu {
         display: flex;
         gap: 40px;
         align-items: center;
         max-width: 432px;
         height: 50px;
+
+        li {
+            a {
+                font-weight: 700;
+                font-size: 1em;
+                line-height: 1.6em;
+                text-transform: uppercase;
+            }
+
+            transition: all .4s;
+
+            &:hover {
+                color: $orange
+            }
+        }
+    }
+
+    .auth_div {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+
+        .account {
+            color: $orange;
+            font-size: 1.25em;
+        }
+
+        a {
+            svg {
+                color: $orange;
+            }
+        }
+    }
+
+
+    .box {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .person {
+            color: $orange;
+            font-size: 1.25em;
+        }
+        span{
+            font-weight: 700;
+            font-size: 1em;
+            line-height: 1.6em;
+        }
+
+        a {
+            font-weight: 700;
+            font-size: 1em;
+            line-height: 1.6em;
+            text-transform: uppercase;
+            transition: all .4s;
+
+            &:hover {
+                color: $orange;
+            }
+        }
     }
 }

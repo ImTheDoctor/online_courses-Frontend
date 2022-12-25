@@ -3,16 +3,17 @@ import Head from 'next/head';
 import Menu from './menu/Menu'
 import Footer from './footer/Footer';
 import { Lato } from '@next/font/google'
-import {main} from './layout.module.scss'
+import { main } from './layout.module.scss'
 const lato = Lato({
     weight: ['400', '700']
 })
 
 const Layout = ({ children, title }) => {
+    const pageTitle = `${title} - Online School `
     return (
         <>
             <Head>
-                <title> {title ? title + ' - Online School' : 'Online School'} </title>
+                <title key="title"> {pageTitle} </title>
                 <meta name="description" content="Online Courses" />
                 <link rel="icon" href="/Vector.ico" />
             </Head>

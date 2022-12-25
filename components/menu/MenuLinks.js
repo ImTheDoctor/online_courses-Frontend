@@ -4,10 +4,6 @@ import Link from 'next/link'
 import menuLinks from './menu.module.scss'
 
 const menu_list = [
-    // {
-    //     title: 'Home',
-    //     path: '/'
-    // },
     {
         title: 'About us',
         path: '/about'

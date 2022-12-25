@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import Layout from '/components/Layout'
 import CourseItem from '/components/course/CourseItem'
 import { heading, course_section } from './course.module.scss'
@@ -12,7 +12,9 @@ const index = () => {
           <h1>Our Online courses</h1>
         </div>
         <div className={course_section}>
-          <CourseItem />
+          <Suspense fallback={<p>Loading feed...</p>}>
+            <CourseItem />
+          </Suspense>
         </div>
       </section>
     </Layout>

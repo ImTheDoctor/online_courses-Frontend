@@ -17,3 +17,13 @@ export const postMessage = async (dataFromApp) => {
         console.log('Err', error.message);
     }
 }
+
+export const paypal = async (paypal) => {
+    try {
+        // console.log(paypal);
+        const { data } = await axios.post(`http://localhost:5000/paypal/`, paypal)
+        return data
+    } catch (error) {
+        console.log('Err', error.message);
+    }
+}
