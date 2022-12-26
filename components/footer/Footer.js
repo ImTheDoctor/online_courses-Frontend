@@ -44,7 +44,6 @@ const Footer = () => {
             <div className={bottom}>
                 <div className={`container ${bottom}`}>
                     <p>&copy; All rights reserved. Made with <AiOutlineHeart className={heart} /> by Henrik Hayrapetyan</p>
-                    <button>GO TO TOP</button>
                 </div>
             </div>
         </footer>

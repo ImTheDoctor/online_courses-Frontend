@@ -8,7 +8,7 @@ import Link from 'next/link'
 import { FiFacebook, FiTwitter, FiCheckCircle } from 'react-icons/fi'
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa'
 import { getDataCourseAction } from "../../redux/actions/dataActions"
-import { title_wrapper, title, main_section, course_section, left_section, description, learn_info, right_section, course_info, price, teacher_section, imgWrapper, teacher_info } from './course.module.scss'
+import { title_wrapper, title, main_section, course_section, left_section, description, learn_info, right_section, course_info, price, teacher_section, imgWrapper, teacher_info, socials } from './course.module.scss'
 import { useAuthContext } from '/hooks/useAuthContext'
 
 const CourseDetail = () => {
@@ -83,7 +83,7 @@ const CourseDetail = () => {
                         <h1>{course?.teacherID?.fullname}</h1>
                         <span>{course?.teacherID?.position}</span>
                         <p>{course?.teacherID?.description}</p>
-                        <div>
+                        <div className={socials}>
                             <Link href={course?.teacherID?.socials?.[0] || ''} target='_blank'><FiFacebook /></Link>
                             <Link href={course?.teacherID?.socials?.[1] || ''} target='_blank'><FiTwitter /></Link>
                             <Link href={course?.teacherID?.socials?.[2] || ''} target='_blank'><FaLinkedinIn /></Link>

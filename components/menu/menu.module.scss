@@ -24,7 +24,7 @@
                 text-transform: uppercase;
             }
 
-            transition: all .4s;
+            transition: $transition;
 
             &:hover {
                 color: $orange
@@ -44,6 +44,7 @@
 
         a {
             svg {
+                font-size: 1.25em;
                 color: $orange;
             }
         }
@@ -70,7 +71,7 @@
             font-size: 1em;
             line-height: 1.6em;
             text-transform: uppercase;
-            transition: all .4s;
+            transition: $transition;
 
             &:hover {
                 color: $orange;

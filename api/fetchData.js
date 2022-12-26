@@ -9,6 +9,15 @@ export const getApiCourse = async () => {
     }
 }
 
+export const getApiTeachers = async () => {
+    try {
+        return await axios.get('http://localhost:5000/teachers')
+            .then(res => res.data)
+    } catch (error) {
+        console.log('Err', error.message)
+    }
+}
+
 export const postMessage = async (dataFromApp) => {
     try {
         const { data } = await axios.post(`http://localhost:5000/contact/`, dataFromApp)
@@ -20,7 +29,6 @@ export const postMessage = async (dataFromApp) => {
 
 export const paypal = async (paypal) => {
     try {
-        // console.log(paypal);
         const { data } = await axios.post(`http://localhost:5000/paypal/`, paypal)
         return data
     } catch (error) {

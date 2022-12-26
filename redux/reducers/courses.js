@@ -3,7 +3,7 @@ const initialState = {
 };
 const courses = (state = initialState, { type, payload }) => {
     switch (type) {
-        case "SET_DATA":
+        case "SET_DATA_COURSE":
             return { ...state, courses: payload };
         default:
             return state;
