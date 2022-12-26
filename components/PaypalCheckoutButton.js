@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { PayPalButtons } from '@paypal/react-paypal-js';
+import { ToastContainer, toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 
 // Custom component to wrap the PayPalButtons and handle currency changes
 const PaypalCheckoutButton = ({ course }) => {
@@ -10,19 +12,21 @@ const PaypalCheckoutButton = ({ course }) => {
     const [error, setError] = useState(null)
 
     if (paidFor) {
-        alert('successful')
+        toast.success("Thank you for purchasing the course", {
+            position: toast.POSITION.BOTTOM_RIGHT,
+            autoClose: 2000
+        })
     }
     if (error) {
-        alert('error')
+        toast.error("Oops, something get wrong!", {
+            position: toast.POSITION.BOTTOM_RIGHT,
+            autoClose: 2000
+        })
     }
 
     return (
         <>
             <PayPalButtons
-                // style={{"layout":"horizontal"}}
-                // disabled={false}
-                // forceReRender={[course.price, style]}
-                // fundingSource={undefined}
                 onClick={async (_data, actions) => {
                     const hasAlreadyBought = false
                     if (hasAlreadyBought) {
@@ -48,8 +52,7 @@ const PaypalCheckoutButton = ({ course }) => {
 
                 }}
                 onApprove={async (_data, actions) => {
-                    return await actions.order.capture().then(function (details) {
-                        alert('Transaction completed by ' + details.payer.name.given_name);
+                    return await actions.order.capture().then(function () {
                         setPaidFor(true)
                     })
                 }}
@@ -62,6 +65,9 @@ const PaypalCheckoutButton = ({ course }) => {
                     console.error('Error', err);
                 }}
             />
+            <div>
+                <ToastContainer />
+            </div>
         </>
     );
 };
